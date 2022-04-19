@@ -20,7 +20,7 @@ Dependencies
 ------------
 
 ansible.posix collection is used to set up the authorized key.
-https://docs.ansible.com/ansible/latest/collections/ansible/posix/index.html
+See https://docs.ansible.com/ansible/latest/collections/ansible/posix/index.html and https://galaxy.ansible.com/ansible/posix.
 
 Example Playbook
 ----------------
