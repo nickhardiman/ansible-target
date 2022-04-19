@@ -1,0 +1,4 @@
+---
+- include_tasks: control.yml
+- include_tasks: managed.yml
+

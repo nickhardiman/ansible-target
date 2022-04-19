@@ -1,0 +1,13 @@
+# local private key
+#
+- name: add control node private key
+  copy:
+    content: "{{ control_node_private_key }}"
+    dest: "{{ control_node_private_key_file }}"
+    mode: '0600'
+  delegate_to: localhost
+  connection: local
+  become: no
+
+
+
