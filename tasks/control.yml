@@ -9,9 +9,10 @@
   connection: local
   become: no
 
-- name: add control node public key
+# occasionally useful to keep a local copy of the pubkey 
+- name: also store the public key on the control node
   copy:
-    content: "{{ control_node_public_key }}"
+    content: "{{ managed_node_public_key }}"
     dest: "{{ control_node_public_key_file }}"
     mode: '0644'
   delegate_to: localhost
