@@ -1,4 +1,4 @@
-# local private key
+# local key pair
 #
 - name: add control node private key
   copy:
@@ -9,5 +9,13 @@
   connection: local
   become: no
 
+- name: add control node public key
+  copy:
+    content: "{{ control_node_public_key }}"
+    dest: "{{ control_node_public_key_file }}"
+    mode: '0644'
+  delegate_to: localhost
+  connection: local
+  become: no
 
 
